@@ -1,0 +1,11 @@
+#dump1090
+dump1090/
+
+#logs
+*.log
+
+#python
+__pycache__/
+
+### vscode ###
+.vscode/

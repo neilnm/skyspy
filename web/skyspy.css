@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+#ts{
+    color: #fff;
+}
+
+#info{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    width: 99vw;
+}
+
+#last-seen{
+    font-size: 4vw;
+    text-align: left;
+    color: #fff;
+    padding-left: 20px;
+}
+
+#metar{
+    font-size: 4vw;
+    text-align: right;
+    color: #fff;
+}
+
+#flight-info{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    width: 99vw;
+    height: 44vw;
+}
+
+#box1{
+    font-size: 7vw;
+}
+
+#box2{
+    font-size: 5vw;
+}
+
+.box{
+    justify-content: center;
+    text-align: center;
+    font-size: 5vw;
+    color: green;
+    border: 1px solid #fff;
+    padding: 20px;
+}
