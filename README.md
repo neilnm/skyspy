@@ -1,4 +1,4 @@
-[![Build Status](https://www.travis-ci.com/neilnm/skyspy.svg?branch=master)](https://www.travis-ci.com/neilnm/skyspy) ![Python Versions](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8%20%7C3.9-blue) ![license](https://img.shields.io/github/license/neilnm/skyspy)
+[![Build Status](https://www.travis-ci.com/neilnm/skyspy.svg?branch=master)](https://www.travis-ci.com/neilnm/skyspy) ![Python Versions](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8%20%7C3.9-blue) ![license](https://img.shields.io/github/license/neilnm/skyspy?style=plastic)
 
 # skyspy
 skyspy is a Python3 application meant to run on a Raspberry Pi, that will alert you and display flight information when an aircraft is in your vicinity.
