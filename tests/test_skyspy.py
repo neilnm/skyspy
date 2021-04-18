@@ -105,6 +105,7 @@ def main():
         data['data']['lastSeen'] = ""
         data['data']['ts'] = ""
         data['data']['metar'] = ""
+        data['data']['dataTs'] = ""
         print(json.dumps(data))
         return data == test_data
 

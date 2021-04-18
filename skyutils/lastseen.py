@@ -44,3 +44,14 @@ def get_text_to_display(time):
     hours = math.floor(time / 60)
     minutes = time % 60
     return f"{hours}h{minutes:02d} minutes ago"
+
+
+def update_data_ts():
+    with open('web/data.json', 'r') as f:
+        data = json.load(f)
+
+    with open('web/data.json', 'w') as f:
+        data['data']['dataTs'] = str(datetime.now().strftime("%Y-%m-%d %H:%M"))
+        json.dump(data, f)
+
+

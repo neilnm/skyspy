@@ -26,12 +26,11 @@ class Runway:
             return num + 90
 
     def is_usable(self, wind):
-        if (self.min_wind <= wind <= self.max_wind or
-            self.min_wind <= (wind + 360) <= self.max_wind):
-            return True
+        return (self.min_wind <= wind <= self.max_wind or
+                self.min_wind <= (wind + 360) <= self.max_wind)
 
     def runway_for_wind(self, wind):
-        # TODO 
+        # TODO
         # if 90degree crosswind, both runways are valid.
         # currently returns the one in cfg by default.
         if self.is_usable(wind):

@@ -50,3 +50,9 @@ body{
     border: 1px solid #fff;
     padding: 20px;
 }
+
+.check-antenna{
+    font-size: 15vw;
+    text-align: center;
+    color: red;
+}

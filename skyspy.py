@@ -12,7 +12,7 @@ from skyutils.logger import Logger
 from skyutils.metar import Metar
 from skyutils.config import get_geo_fence, get_home_coords, get_user_alt
 from skyutils.displayaircraft import display_aircraft
-from skyutils.lastseen import update_last_seen
+from skyutils.lastseen import update_last_seen,  update_data_ts
 from skyutils.webserver import Webserver
 
 
@@ -36,6 +36,7 @@ def main():
     last_dist_to_home = 1000  # arbitrary distance
     last_wind_update = datetime.now()
     last_seen_update = datetime.now()
+    update_data_ts()
     update_last_seen()
     Metar.update_html_wind()
 
@@ -54,10 +55,13 @@ def main():
             last_wind_update = datetime.now()
             Metar.update_html_wind()
 
+        # Update when ac was last seen
+        # Update data refresh timestamp
         last_seen_update_secs = (now - last_seen_update).total_seconds()
         if last_seen_update_secs > 59:
             last_seen_update = datetime.now()
             update_last_seen()
+            update_data_ts()
 
         hexcode_pattern = '[a-z|0-9]{6}'
         if re.search(hexcode_pattern, line[0:6]):

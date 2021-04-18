@@ -1,1 +1,19 @@
-{"data": {"hexcode": "", "flight": "", "description": "", "altitude": "", "speed": "", "track": "", "origin": "", "originName": "", "destination": "", "destinationName": "", "type": "", "lastSeen": "", "ts": "", "metar": ""}}
+{
+    "data": {
+        "hexcode": "",
+        "flight": "",
+        "description": "",
+        "altitude": "",
+        "speed": "",
+        "track": "",
+        "origin": "",
+        "originName": "",
+        "destination": "",
+        "destinationName": "",
+        "type": "",
+        "lastSeen": "",
+        "ts": "",
+        "metar": "",
+        "dataTs": ""
+    }
+}

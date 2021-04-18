@@ -1,11 +1,13 @@
 [![Build Status](https://www.travis-ci.com/neilnm/skyspy.svg?branch=master)](https://www.travis-ci.com/neilnm/skyspy) ![Python Versions](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8%20%7C3.9-blue) ![license](https://img.shields.io/github/license/neilnm/skyspy?style=plastic)
 
 # skyspy
-skyspy is a Python3 application meant to run on a Raspberry Pi, that will alert you and display flight information when an aircraft is in your vicinity.
+skyspy is a Python3 application meant to run on a Raspberry Pi that will alert you and display flight information when an aircraft is in your vicinity.
 
 It allows you to define what your "vicinity" is by configuring a geofence through lat/lon coordinates and an altitude below which the aircraft should be.
 
 It achieves this with an ADS-B antenna and by parsing the output of the [dump1090](https://github.com/antirez/dump1090) application. See below for more information on how to achieve this. Not as complicated as it sounds!
+
+Watch this [YouTube video](https://youtu.be/ho91R_vKxag) to see how it in action.
 
 ## Table of Content
 - [Assumptions](#Assumptions)
