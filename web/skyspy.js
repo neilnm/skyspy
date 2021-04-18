@@ -20,9 +20,9 @@ $(document).ready(function() {
                 $("#altitude").text(`Alt: ${result.data.altitude}`);
                 $("#track").text(`Heading: ${result.data.track}`);
                 $("#speed").text(`Speed: ${result.data.speed}`);
-                $("#origin-name").text(result.data.originName);
+                $("#origin-name").html(`From: <br>${result.data.originName}`);
                 $("#origin").text(result.data.origin);
-                $("#destination-name").text(result.data.destinationName);
+                $("#destination-name").html(`To: <br>${result.data.destinationName}`);
                 $("#destination").text(result.data.destination);
                 dataTs = result.data.dataTs;
 
