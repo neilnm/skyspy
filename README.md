@@ -7,7 +7,7 @@ It allows you to define what your "vicinity" is by configuring a geofence throug
 
 It achieves this with an ADS-B antenna and by parsing the output of the [dump1090](https://github.com/antirez/dump1090) application. See below for more information on how to achieve this. Not as complicated as it sounds!
 
-Watch this [YouTube video](https://youtu.be/ho91R_vKxag) to see how it in action.
+Watch this [YouTube video](https://www.youtube.com/watch?v=bD32BESW4C0) to see how it in action.
 
 ## Table of Content
 - [Assumptions](#Assumptions)
