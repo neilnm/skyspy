@@ -38,7 +38,7 @@ def main():
     last_wind_update = datetime.now()
     last_seen_update = datetime.now()
     update_last_seen()
-    Metar.update_html_wind()
+    Metar.update_metar()
 
 
     # test data
@@ -54,9 +54,9 @@ def main():
 
         now = datetime.now()
         last_wind_update_mins = (now - last_wind_update).total_seconds() / 60
-        if last_wind_update_mins > 10:
+        if last_wind_update_mins > 1:
             last_wind_update = datetime.now()
-            Metar.update_html_wind()
+            Metar.update_metar()
 
         last_seen_update_secs = (now - last_seen_update).total_seconds()
         if last_seen_update_secs > 59:
