@@ -33,9 +33,9 @@ def get_flight_info(ac):
 def get_metar_info(metar):
     try:
         station = metar.station
-        url = ("https://www.aviationweather.gov/adds/dataserver_current"
-               "/httpparam?dataSource=metars&requestType=retrieve&format"
-               f"=xml&hoursBeforeNow=3&mostRecent=true&stationString={station}")
+        url = ("https://aviationweather.gov/cgi-bin/data/dataserver.php?"
+               f"requestType=retrieve&dataSource=metars&stationString={station}"
+               "&startTime=1&format=xml&mostRecent=true")
         open_url = urllib.request.urlopen(url)
         xml_b = open_url.read()
         open_url.close()
