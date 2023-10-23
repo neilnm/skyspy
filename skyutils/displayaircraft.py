@@ -24,9 +24,9 @@ def display_aircraft(ac):
     data['data']['track'] = ac.track
     data['data']['speed'] = ac.speed
     data['data']['originName'] = ac.origin_name
-    data['data']['origin'] = f'({ac.origin})'
+    data['data']['origin'] = f'{ac.origin}'
     data['data']['destinationName'] = ac.destination_name
-    data['data']['destination'] = f'({ac.destination})'
+    data['data']['destination'] = f'{ac.destination}'
 
     with open('web/data.json', 'w') as f:
         json.dump(data, f)
