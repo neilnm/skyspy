@@ -12,6 +12,7 @@ def get_flight_info(ac):
         html = BeautifulSoup(html_b, 'html.parser')
 
         ac.description = html.find("div", {"id":"info-sections-wrapper"}).find("div",{"id":"value"}).text
+        ac.description = f"{ac.flight} / {ac.description}"
         ac.origin = html.find("div", {"id":"origin"}).find("div",{"id":"code"}).text
         ac.origin_name = html.find("div", {"id":"origin"}).find("div",{"id":"city"}).text
         ac.destination = html.find("div", {"id":"destination"}).find("div",{"id":"code"}).text
@@ -37,10 +38,3 @@ def get_metar_info(metar):
         metar.temp = xml.find('temp_c').string
     except Exception:
         pass
-
-
-def __try_html_data(html, d):
-    try:
-        return html.find_all(f'{d[0]}', attrs={f'{d[1]}': f'{d[2]}'})[0].attrs[f'{d[3]}']
-    except Exception:
-        return "N/A"
