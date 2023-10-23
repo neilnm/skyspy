@@ -5,27 +5,19 @@ from bs4 import BeautifulSoup
 
 def get_flight_info(ac):
     try:
-        url = f"https://flightaware.com/live/flight/{ac.flight}"
+        url = f"https://www.radarbox.com/data/flights/{ac.flight}"
         open_url = urllib.request.urlopen(url)
         html_b = open_url.read()
         open_url.close()
         html = BeautifulSoup(html_b, 'html.parser')
 
-        description = __try_html_data(
-            html, ["meta", "property", "og:description", "content"])
-        ac.origin = __try_html_data(
-            html, ["meta", "name", "origin", "content"])
-        ac.destination = __try_html_data(
-            html, ["meta", "name", "destination", "content"])
-        ac.type = __try_html_data(
-            html, ["meta", "name", "aircrafttype", "content"])
+        ac.description = html.find("div", {"id":"info-sections-wrapper"}).find("div",{"id":"value"}).text
+        ac.origin = html.find("div", {"id":"origin"}).find("div",{"id":"code"}).text
+        ac.origin_name = html.find("div", {"id":"origin"}).find("div",{"id":"city"}).text
+        ac.destination = html.find("div", {"id":"destination"}).find("div",{"id":"code"}).text
+        ac.destination_name = html.find("div", {"id":"destination"}).find("div",{"id":"city"}).text
+        ac.type = html.find("div", {"id":"aircraft-info"}).find("div",{"id":"value"}).text
 
-        flight_index = description.index("flight")
-        ac.description = description[5:flight_index]
-        from_index = description.index(" from ")
-        to_index = description.index(" to ")
-        ac.origin_name = description[from_index + 6:to_index]
-        ac.destination_name = description[to_index + 4:]
     except Exception:
         pass
 
